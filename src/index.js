@@ -3,6 +3,9 @@
 import popupToogleCallForm from './modules/popupToogleCallForm';
 import popupToogleCheckForm from './modules/popupToogleCheckForm';
 import popupTooglePriceForm from './modules/popupTooglePriceForm';
+import tabsCalc from './modules/tabsCalc';
+import moreBtn from './modules/moreBtn';
+
 
 
 //Модальное окно - звонок
@@ -11,3 +14,7 @@ popupToogleCallForm();
 popupToogleCheckForm();
 //Модальное окно - цена со скидкой
 popupTooglePriceForm();
+//Аккардион - калькулятор
+tabsCalc();
+
+moreBtn();
