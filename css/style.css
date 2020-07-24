@@ -427,6 +427,10 @@ header .logo img {
 .scroll-hidden {
    overflow: hidden;
 }
+.call-btn {
+   /* position: relative; */
+   cursor: pointer;
+}
 .constructor .onoffswitch-checkbox {
    display: none;
 }
