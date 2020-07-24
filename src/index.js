@@ -5,6 +5,7 @@ import popupToogleCheckForm from './modules/popupToogleCheckForm';
 import popupTooglePriceForm from './modules/popupTooglePriceForm';
 import tabsCalc from './modules/tabsCalc';
 import moreBtn from './modules/moreBtn';
+import popupToogleConsulForm from './modules/popupToogleConsulForm';
 
 
 
@@ -16,5 +17,7 @@ popupToogleCheckForm();
 popupTooglePriceForm();
 //Аккардион - калькулятор
 tabsCalc();
-
+//Конпка больше
 moreBtn();
+//Моадльное окно - консультация 
+popupToogleConsulForm();

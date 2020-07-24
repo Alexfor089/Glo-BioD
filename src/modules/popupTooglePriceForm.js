@@ -1,6 +1,6 @@
 const popupTooglePriceForm = () => {
    let popupDiscount = document.querySelector('.popup-discount'),
-      discontBtn = document.querySelectorAll('.discount-btn', )
+      discontBtn = document.querySelectorAll('.discount-btn')
    discontBtn.forEach((item) => {
       item.addEventListener("click", () => {
          popupDiscount.style.cssText = `
