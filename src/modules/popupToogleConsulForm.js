@@ -9,6 +9,7 @@ const popupToogleConsulForm = () => {
         transition: all .4s;
         display: block;
         `;
+         document.body.style.cssText = `overflow: hidden;`
          setTimeout(() => {
             popupConsult.style.opacity = "1";
          }, 50);
@@ -19,6 +20,7 @@ const popupToogleConsulForm = () => {
 
    popupConsult.addEventListener("click", (event) => {
       event.preventDefault();
+      document.body.style.cssText = `overflow: scroll;`
       let target = event.target;
       if (target.classList.contains("popup-close")) {
          popupConsult.style.cssText = `display: none;`;

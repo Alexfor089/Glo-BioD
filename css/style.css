@@ -424,6 +424,9 @@ header .logo img {
    -moz-user-select: none;
    -ms-user-select: none;
 }
+.scroll-hidden {
+   overflow: hidden;
+}
 .constructor .onoffswitch-checkbox {
    display: none;
 }

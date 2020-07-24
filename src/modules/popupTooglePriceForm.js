@@ -8,6 +8,7 @@ const popupTooglePriceForm = () => {
         transition: all .4s;
         display: block;
         `;
+         document.body.style.cssText = `overflow: hidden;`
          setTimeout(() => {
             popupDiscount.style.opacity = "1";
          }, 50);
@@ -18,6 +19,7 @@ const popupTooglePriceForm = () => {
 
    popupDiscount.addEventListener("click", (event) => {
       event.preventDefault();
+      document.body.style.cssText = `overflow: scroll;`
       let target = event.target;
       if (target.classList.contains("popup-close")) {
          popupDiscount.style.cssText = `display: none;`;

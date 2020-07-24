@@ -1,13 +1,17 @@
 const popupToogleCallForm = () => {
+
   let popupCall = document.querySelector('.popup-call'),
     callBtns = document.querySelectorAll('.call-btn')
   callBtns.forEach((item) => {
     item.addEventListener("click", () => {
+
       popupCall.style.cssText = `
+       
        opacity: 0;
        transition: all .4s;
        display: block;
        `;
+      document.body.style.cssText = `overflow: hidden;`
       setTimeout(() => {
         popupCall.style.opacity = "1";
       }, 50);
@@ -16,9 +20,12 @@ const popupToogleCallForm = () => {
   });
 
 
-  popupCall.addEventListener("click", (event) => {
-    event.preventDefault();
-    let target = event.target;
+  popupCall.addEventListener("click", (e) => {
+    // 
+
+    e.preventDefault();
+    document.body.style.cssText = `overflow: scroll;`
+    let target = e.target;
     if (target.classList.contains("popup-close")) {
       popupCall.style.cssText = `display: none;`;
       setTimeout(() => {

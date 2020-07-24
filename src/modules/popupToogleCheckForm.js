@@ -8,6 +8,7 @@ const popupToogleCheckForm = () => {
         transition: all .4s;
         display: block;
         `;
+         document.body.style.cssText = `overflow: hidden;`
          setTimeout(() => {
             popupCheck.style.opacity = "1";
          }, 50);
@@ -19,6 +20,7 @@ const popupToogleCheckForm = () => {
    popupCheck.addEventListener("click", (event) => {
       event.preventDefault();
       let target = event.target;
+      document.body.style.cssText = `overflow: scroll;`
       if (target.classList.contains("popup-close")) {
          popupCheck.style.cssText = `display: none;`;
          setTimeout(() => {
