@@ -4,7 +4,7 @@ const popupToogleCallForm = () => {
   callBtns.forEach((item) => {
     item.addEventListener("click", () => {
       popupCall.style.cssText = `
-      opacity: 0;
+      
        opacity: 0;
        transition: all .4s;
        display: block;
@@ -17,7 +17,9 @@ const popupToogleCallForm = () => {
   });
 
   popupCall.addEventListener("click", (e) => {
-    //
+    // popupCall.style.cssText = `
+    // overflow-x:hidden`;
+    // //
 
     e.preventDefault();
     document.body.style.cssText = `overflow: scroll;`;

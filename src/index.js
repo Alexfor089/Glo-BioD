@@ -7,6 +7,8 @@ import tabsCalc from './modules/tabsCalc';
 import moreBtn from './modules/moreBtn';
 import popupToogleConsulForm from './modules/popupToogleConsulForm';
 import tabs from './modules/tabs';
+import sendForm from './modules/sendForm';
+
 
 
 
@@ -24,3 +26,5 @@ moreBtn();
 popupToogleConsulForm();
 //Аккардион - внизу
 tabs();
+//Отправка форм
+sendForm();

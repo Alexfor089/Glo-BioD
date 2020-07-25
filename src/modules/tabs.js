@@ -6,7 +6,7 @@ const tabs = () => {
 
    headingPanelTabs.forEach(elem => {
       elem.addEventListener('click', () => {
-         const foo = (first, second, third) => {
+         const definition = (first, second, third) => {
             if (first.style.display === 'block') {
                third.style.display = 'none';
                second.style.display = 'none';
@@ -19,15 +19,15 @@ const tabs = () => {
          };
          //first
          if (elem.closest('#headingOne-two')) {
-            foo(collapseFirst, collapseSecond, collapseThird);
+            definition(collapseFirst, collapseSecond, collapseThird);
          }
          //second
          if (elem.closest('#headingTwo-two')) {
-            foo(collapseSecond, collapseFirst, collapseThird);
+            definition(collapseSecond, collapseFirst, collapseThird);
          }
          //third
          if (elem.closest('#headingThree-two')) {
-            foo(collapseThird, collapseSecond, collapseFirst);
+            definition(collapseThird, collapseSecond, collapseFirst);
          }
 
       });

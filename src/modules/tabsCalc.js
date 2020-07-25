@@ -7,7 +7,7 @@ const tabsCalc = () => {
       collapseFourth = document.getElementById('collapseFour'),
       constructBtn = document.querySelectorAll('.construct-btn');
 
-   const foo = (first, second, third, fourth) => {
+   const definition = (first, second, third, fourth) => {
       if (first.style.display === 'block') {
          third.style.display = 'none';
          fourth.style.display = 'none';
@@ -26,23 +26,24 @@ const tabsCalc = () => {
       elem.addEventListener('click', () => {
          //first
          if (elem.closest('#headingOne')) {
-            foo(collapseFirst, collapseSecond, collapseThird, collapseFourth);
+            definition(collapseFirst, collapseSecond, collapseThird, collapseFourth);
          }
          //second
          if (elem.closest('#headingTwo')) {
-            foo(collapseSecond, collapseFirst, collapseThird, collapseFourth);
+            definition(collapseSecond, collapseFirst, collapseThird, collapseFourth);
          }
          //third
          if (elem.closest('#headingThree')) {
-            foo(collapseThird, collapseSecond, collapseFourth, collapseFirst);
+            definition(collapseThird, collapseSecond, collapseFourth, collapseFirst);
          }
          //Fourth
          if (elem.closest('#headingFour')) {
-            foo(collapseFourth, collapseThird, collapseSecond, collapseFirst);
+            definition(collapseFourth, collapseThird, collapseSecond, collapseFirst);
          }
 
       });
    });
+
    // constructBtn.forEach(elem => {
    //    elem.addEventListener('click', () => {
    //       if (collapseFirst.style.display = 'block') {
