@@ -1,72 +1,68 @@
 const tabsCalc = () => {
 
-   const btnAccordion = document.querySelectorAll(`a[data-parent="#accordion"]`),
-      collapseOneId = document.getElementById('collapseOne'),
-      collapseTwoId = document.getElementById('collapseTwo'),
-      collapseThreeId = document.getElementById('collapseThree'),
-      collapseFourId = document.getElementById('collapseFour');
+   const headingPanelTabsAcс = document.querySelectorAll(`a[data-parent="#accordion"]`),
+      collapseFirst = document.getElementById('collapseOne'),
+      collapseSecond = document.getElementById('collapseTwo'),
+      collapseThird = document.getElementById('collapseThree'),
+      collapseFourth = document.getElementById('collapseFour'),
+      constructBtn = document.querySelectorAll('.construct-btn');
 
-   btnAccordion.forEach(elem => {
-      elem.addEventListener('click', event => {
-         event.preventDefault();
-         //One
+   const foo = (first, second, third, fourth) => {
+      if (first.style.display === 'block') {
+         third.style.display = 'none';
+         fourth.style.display = 'none';
+         second.style.display = 'none';
+
+      } else {
+         first.style.display = 'block';
+         third.style.display = 'none';
+         fourth.style.display = 'none';
+         second.style.display = 'none';
+
+      }
+   };
+
+   headingPanelTabsAcс.forEach(elem => {
+      elem.addEventListener('click', () => {
+         //first
          if (elem.closest('#headingOne')) {
-            if (collapseOneId.style.display === 'none') {
-               collapseOneId.style.display = 'block';
-               collapseTwoId.style.display = 'none';
-               collapseThreeId.style.display = 'none';
-               collapseFourId.style.display = 'none';
-
-            } else {
-               collapseOneId.style.display = 'block';
-            }
+            foo(collapseFirst, collapseSecond, collapseThird, collapseFourth);
          }
-         //Two
-         if (elem.closest('#headingTwo') || elem.matches('.btnOne')) {
-
-            if (collapseTwoId.style.display === 'block') {
-               collapseTwoId.style.display = 'block';
-
-            } else {
-               collapseOneId.style.display = 'none';
-               collapseTwoId.style.display = 'block';
-               collapseThreeId.style.display = 'none';
-               collapseFourId.style.display = 'none';
-            }
+         //second
+         if (elem.closest('#headingTwo')) {
+            foo(collapseSecond, collapseFirst, collapseThird, collapseFourth);
          }
-         //Three
-         if (elem.closest('#headingThree') || elem.matches('.btnTwo')) {
-
-            if (collapseThreeId.style.display === 'block') {
-               collapseThreeId.style.display = 'block';
-
-            } else {
-               collapseOneId.style.display = 'none';
-               collapseTwoId.style.display = 'none';
-               collapseThreeId.style.display = 'block';
-               collapseFourId.style.display = 'none';
-            }
+         //third
+         if (elem.closest('#headingThree')) {
+            foo(collapseThird, collapseSecond, collapseFourth, collapseFirst);
          }
-         //Four
-         if (elem.closest('#headingFour') || elem.matches('.btnThree')) {
-
-            if (collapseFourId.style.display === 'block') {
-               collapseFourId.style.display = 'block';
-
-            } else {
-               collapseOneId.style.display = 'none';
-               collapseTwoId.style.display = 'none';
-               collapseThreeId.style.display = 'none';
-               collapseFourId.style.display = 'block';
-            }
+         //Fourth
+         if (elem.closest('#headingFour')) {
+            foo(collapseFourth, collapseThird, collapseSecond, collapseFirst);
          }
 
       });
-
    });
+   // constructBtn.forEach(elem => {
+   //    elem.addEventListener('click', () => {
+   //       if (collapseFirst.style.display = 'block') {
+   //          collapseSecond.style.display = 'block';
+   //          collapseFirst.style.display = 'none';
+
+   //       };
+   //       if (collapseSecond.style.display === 'block') {
+   //          collapseThird.style.display = 'block';
+   //          collapseSecond.style.display = 'none';;
+   //       };
+   //       if (collapseThird.style.display === 'block') {
+   //          collapseFourth.style.display = 'block';
+   //          collapseThird.style.display = 'none';
+
+   //       };
+   //    })
+   // });
+
 
 };
-
-
 
 export default tabsCalc;

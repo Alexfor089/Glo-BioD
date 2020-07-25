@@ -6,6 +6,7 @@ import popupTooglePriceForm from './modules/popupTooglePriceForm';
 import tabsCalc from './modules/tabsCalc';
 import moreBtn from './modules/moreBtn';
 import popupToogleConsulForm from './modules/popupToogleConsulForm';
+import tabs from './modules/tabs';
 
 
 
@@ -21,3 +22,5 @@ tabsCalc();
 moreBtn();
 //Моадльное окно - консультация 
 popupToogleConsulForm();
+//Аккардион - внизу
+tabs();
