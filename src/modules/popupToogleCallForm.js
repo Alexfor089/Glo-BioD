@@ -17,9 +17,7 @@ const popupToogleCallForm = () => {
   });
 
   popupCall.addEventListener("click", (e) => {
-    // popupCall.style.cssText = `
-    // overflow-x:hidden`;
-    // //
+
 
     e.preventDefault();
     document.body.style.cssText = `overflow: scroll;`;
