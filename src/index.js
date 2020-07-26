@@ -1,17 +1,17 @@
 "use strict";
 
-import tabsCalc from "./modules/tabsCalc";
+import accordionCalc from "./modules/accordionCalc";
 import moreBtn from "./modules/moreBtn";
-import tabs from "./modules/tabs";
+import accordionTwo from "./modules/accordion";
 import popupsAll from "./modules/popupsAll";
 import mySendFormCalc from "./modules/sendFormAll";
 
 //Аккардион - калькулятор
-tabsCalc();
+accordionCalc();
 //Конпка больше
 moreBtn();
 //Аккардион - внизу
-tabs();
+accordionTwo();
 //Отправка форм
 mySendFormCalc.start();
 //Все попапы

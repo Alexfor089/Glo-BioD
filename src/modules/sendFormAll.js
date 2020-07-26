@@ -605,9 +605,9 @@ class SendFormCalc {
          popupNone(popupDiscountCalc);
       });
 
-   };
+   }
 
-};
+}
 
 const mySendFormCalc = new SendFormCalc();
 
