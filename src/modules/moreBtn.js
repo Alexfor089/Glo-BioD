@@ -1,23 +1,21 @@
 const moreBtn = () => {
-   const
-      addBtnMore = document.querySelector('.add-sentence-btn'),
-      forNumberCart = document.querySelector('.visible-sm-block'),
-      oneCart = document.querySelector('.hidden'),
-      twoCart = document.querySelector('.hidden-xs');
+   const shadowBlocks = document.querySelectorAll(`.col-xs-12.col-sm-6.col-md-4`),
+      btnAddSentence = document.querySelector('.add-sentence-btn');
 
-   addBtnMore.addEventListener('click', event => {
+
+   btnAddSentence.addEventListener('click', (event) => {
       event.preventDefault();
+      shadowBlocks.forEach((elem) => {
+         if (elem.matches('.visible-sm-block') || elem.matches('.hidden')) {
+            elem.classList.remove('visible-sm-block', 'hidden');
+            btnAddSentence.style.cssText = `transform: scale(0)`;
+         }
 
-      addBtnMore.style.display = 'none';
-
-      forNumberCart.style.cssText = `display: block!important`;
-      oneCart.style.cssText = `display: block!important`;
-      twoCart.style.cssText = `display: block!important`;
-
-
+      });
 
    });
 
-
 };
+
+
 export default moreBtn;

@@ -366,6 +366,14 @@ text-area:focus {
    background-color: #def7ff;
 }
 
+.capture-form-popup {
+   display: block;
+   padding-top: 4rem;
+   padding-bottom: 3rem;
+   width: 39rem;
+   background-color: #def7ff;
+}
+
 .section-form .capture-form h4 {
    font-family: "MuseoSansCyrl_bold", sans-serif;
    font-size: 2.2rem;
@@ -1443,6 +1451,7 @@ header .logo img {
       height: 4rem;
       padding: 0;
    }
+
 }
 
 @media (max-width: 320px) {
