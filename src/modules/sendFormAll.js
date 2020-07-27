@@ -116,13 +116,61 @@ class SendFormCalc {
       const myOnOffSwitchOne = document.getElementById('myonoffswitch'),
          myOnOffSwitchTwo = document.getElementById('myonoffswitch-two');
 
+      if (myOnOffSwitchOne.checked) {
+         sumpTwo.style.cssText = 'display: none';
+      }
+      if (myOnOffSwitchOne.checked) { //если чекбокс включён
+
+         //1 колодец
+         const chamberOne = () => {
+            sumpTwo.style.cssText = 'display: none';
+            calcResult.value = +this.obj.priseOne + 1000; //цена за днище
+
+            formControl.forEach((elem) => {
+
+               elem.addEventListener('change', () => {
+
+                  if (formDiameterOne.value === '1.4 метра') {
+
+                     if (formNumberOne.value === '1 штука') {
+                        calcResult.value = 10000;
+                     }
+                     if (formNumberOne.value === '2 штуки') {
+                        calcResult.value = ((10000 * 30) / 100) + 10000;
+                     } else if (formNumberOne.value === '3 штуки') {
+                        calcResult.value = ((10000 * 50) / 100) + 10000;
+                     }
+                  }
+
+                  if (formDiameterOne.value === '2 метра') {
+                     calcResult.value = ((10000 * 20) / 100) + 10000;
+
+                     if (formNumberOne.value === '1 штука') {
+                        calcResult.value = 12000;
+                     }
+                     if (formNumberOne.value === '2 штуки') {
+                        calcResult.value = ((10000 * 30) / 100) + 12000;
+                     } else if (formNumberOne.value === '3 штуки') {
+                        calcResult.value = ((10000 * 50) / 100) + 12000;
+                     }
+                  }
+                  //
+                  this.obj.wellOne = calcResult.value;
+                  calcResult.value = +calcResult.value + 1000; //отображаем в примерной стоимости
+
+               });
+            });
+         };
+         chamberOne();
+         //2 колодца
+      }
 
       myOnOffSwitchOne.addEventListener('change', () => {
          if (myOnOffSwitchOne.checked) { //если чекбокс включён
 
             //1 колодец
             const chamberOne = () => {
-               sumpTwo.style.display = 'none';
+               sumpTwo.style.cssText = 'display: none';
                calcResult.value = +this.obj.priseOne + 1000; //цена за днище
 
                formControl.forEach((elem) => {
@@ -161,7 +209,6 @@ class SendFormCalc {
                });
             };
             chamberOne();
-
             //2 колодца
          } else if (!myOnOffSwitchOne.checked) {
             const chamberTwo = () => {

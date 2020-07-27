@@ -1,6 +1,6 @@
 const accordionTwo = () => {
 
-  const btn = document.querySelectorAll('.acc'),
+  const btn = document.querySelectorAll('.panel-heading'),
     btnAcc = document.querySelectorAll(`a[data-parent="#accordion-two"]`),
     content1 = document.getElementById('collapseOne-two'),
     content2 = document.getElementById('collapseTwo-two'),

@@ -10,9 +10,9 @@ import mySendFormCalc from "./modules/sendFormAll";
 accordionCalc();
 //Конпка больше
 moreBtn();
-//Аккардион - внизу
-accordionTwo();
 //Отправка форм
 mySendFormCalc.start();
+//Аккардион - внизу
+accordionTwo();
 //Все попапы
 popupsAll();
